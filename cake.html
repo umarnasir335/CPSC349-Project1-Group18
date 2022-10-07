@@ -1,0 +1,44 @@
+---
+layout: base
+title: Cakes
+pagination:
+  data: photos.x61g7hp.media
+  size: 1
+permalink: "cake/{% if pagination.pageNumber>0 %}page-{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
+---
+<header>
+    <h1>{{ title }} </h1>
+</header>
+
+<div style="font-size:24px;margin:0; padding:0; text-align: center">
+  <body>
+
+    <ul>
+        <div style="text-align:center;">
+          <p>{% if pagination.href.previous %}<a href="{{pagination.href.previous}}">Previous</a>{% else %}Previous{% endif %}</p>
+          <p>{% if pagination.href.next %}<a href="{{pagination.href.next}}">Next</a>{% else %}Next{% endif %}</p>
+        </div>
+    </ul>
+
+    <ul style="text-align:center;">
+      {% for cake in pagination.items -%}
+      <img src= "{{ cake.src.large }}" alt="{{cake.alt}}">
+      <p>{{cake.alt}}</p>
+      <p>Photographer: {{cake.photographer}}</p>
+      {% endfor -%}
+    </ul>
+
+            <a href="http://localhost:8080//">Home</a>
+            <br>
+            <a href="http://localhost:8080/about/">About Us</a>
+  </body>
+</div>
+
+<footer>
+    <hr>
+    <p>
+        <small>
+            <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        </small>
+    </p>
+</footer>
