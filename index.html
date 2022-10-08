@@ -24,6 +24,23 @@ title: Home
 
 </body>
 
+<div style="text-align: center; font-size: 28px;">
+  <large>
+    <p>A storm gallery collection showcasing lightning storms, wind storms,
+				ocean storms, and snow storms!</p>
+    <br>
+  </large>
+<div>
+
+  <body>
+      {% for collection in photos.fpyycnd.media -%}
+      <a href="/cpsc349-project1/storms/{{collection.id}}">
+        <img src= "{{ collection.src.tiny }}" alt="{{collection.alt}}">
+        {% endfor -%}
+      </a>
+
+</body>
+
 
 <footer>
     <hr>
