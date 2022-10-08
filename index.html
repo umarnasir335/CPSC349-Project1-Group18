@@ -9,42 +9,39 @@ title: Home
 
 <div style="text-align: center; font-size: 28px;">
   <large>
-    <a href="animals">Animal Gallery</a>
+    <p>Beautiful and exotic animals from all around the world in one galler!</p>
     <br>
-    <a href="about">About Us</a>
+    <a href="/cpsc349-project1/about/index.html">About Us</a>
   </large>
 </div>
 
   <body>
       {% for collection in photos.h8stntd.media -%}
-      <a href="http://localhost:8080/animals">
-        <img src= "{{ collection.src.tiny }}">
+      <a href="/cpsc349-project1/animals/{{collection.id}}">
+        <img src= "{{ collection.src.tiny }}" alt="{{collection.alt}}">
         {% endfor -%}
       </a>
       <br>
-
       <div style="text-align: center; font-size: 40px;">
-        <a href="mexico">Mexico Gallery</a>
+        <a href="/cpsc349-project1/mexico">Mexico Gallery</a>
       </div>
       <br>
       <div style="text-align: center; font-size: 28px;">
-        Stunning pictures of Mexican culture
+          Stunning pictures of Mexican culture
       </div>
-      {% for collect in photos.jfgzzl3.media -%}
-      <a href="http://localhost:8080/mexico">
-        <img src= "{{ collect.src.tiny }}">
-        {% endfor -%}
-      </a>
-
+        {% for mex in photos.jfgzzl3.media -%}
+          <a href="/cpsc349-project1/mexico">
+          <img src= "{{ mex.src.tiny }}">
+          </a>
+          {% endfor -%}
 </body>
-</div>
 
 
-<footer>
-    <hr>
-    <p>
-        <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
-    </p>
-</footer>
+      <footer>
+          <hr>
+          <p>
+              <small>
+                  <a href="https://www.pexels.com">Photos provided by Pexels</a>
+              </small>
+          </p>
+      </footer>
