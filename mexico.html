@@ -8,8 +8,8 @@ pagination:
 <header>
   <div style="text-align: left; font-size: 28px;">
     <large>
-      <a href="http://localhost:8080//">Home</a>
-      <a href="http://localhost:8080/about/">&emsp; About Us</a>
+      <a href="/cpsc349-project1/">Home</a>
+      <a href="/cpsc349-project1/about/">&emsp; About Us</a>
     </large>
   </div>
   <h1>{{ title }}</h1>
@@ -40,10 +40,10 @@ pagination:
             <ul>
                 <div style="text-align: center; list-style position: inside; display: inline-block; font-size: 26px;">
                   <li>
-                    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
+                    {% if pagination.href.previous %}<a href="/cpsc349-project1{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
                   </li>
                   <li>
-                    {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}
+                    {% if pagination.href.next %}<a href="/cpsc349-project1{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}
                   </li>
                 </div>
             </ul>
