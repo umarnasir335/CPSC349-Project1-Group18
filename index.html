@@ -2,50 +2,51 @@
 layout: base
 title: Home
 ---
-
-<header style="text-align: center; font-size: 32px; padding: 0">
-	<h1>{{ title }}</h1>
+<header style= "text-align: center; font-size: 32px; padding:0;">
+    <h1>{{ title }} </h1>
 </header>
-<br />
+<br>
 
-<div style="text-align: center; font-size: 28px">
-	<large>
-		<a href="animals">Animal Gallery</a>
-		<br />
-		<a href="storms">Storm Gallery</a>
-		<br />
-		<a href="about">About Us</a>
-	</large>
-	<div>
-		<body>
-			<p>
-				Beautiful and exotic animals from all around the world in one gallery!
-			</p>
-			{% for collection in photos.h8stntd.media -%}
-			<a href="/animals">
-				<img src="{{ collection.src.tiny }}" />
-				{% endfor -%}
-			</a>
-			<br />
-			<br />
-			<p>
-				A storm gallery collection showcasing lightning storms, wind storms,
-				ocean storms, and snow storms!
-			</p>
-			{% for collection in photos.fpyycnd.media -%}
-			<a href="/storms/{{collection.id}}">
-				<img src="{{ collection.src.tiny }}" />
-				{% endfor -%}
-			</a>
-		</body>
+<div style="text-align: center; font-size: 28px;">
+  <large>
+    <p>Beautiful and exotic animals from all around the world in one gallery!</p>
+    <br>
+    <a href="/cpsc349-project1/about/index.html">About Us</a>
+  </large>
+<div>
 
-		<footer>
-			<hr />
-			<p>
-				<small>
-					<a href="https://www.pexels.com">Photos provided by Pexels</a>
-				</small>
-			</p>
-		</footer>
-	</div>
-</div>
+  <body>
+      {% for collection in photos.h8stntd.media -%}
+      <a href="/cpsc349-project1/animals/{{collection.id}}">
+        <img src= "{{ collection.src.tiny }}" alt="{{collection.alt}}">
+        {% endfor -%}
+      </a>
+
+</body>
+
+<div style="text-align: center; font-size: 28px;">
+  <large>
+    <p>A storm gallery collection showcasing lightning storms, wind storms,
+				ocean storms, and snow storms!</p>
+    <br>
+  </large>
+<div>
+
+  <body>
+      {% for collection in photos.fpyycnd.media -%}
+      <a href="/cpsc349-project1/storms/{{collection.id}}">
+        <img src= "{{ collection.src.tiny }}" alt="{{collection.alt}}">
+        {% endfor -%}
+      </a>
+
+</body>
+
+
+<footer>
+    <hr>
+    <p>
+        <small>
+            <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        </small>
+    </p>
+</footer>
