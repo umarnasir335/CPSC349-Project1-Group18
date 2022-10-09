@@ -9,13 +9,12 @@ title: Home
 
 <br>
 
-<div style="text-align:center;font-size:28px;">
-  <p>Beautiful and exotic animals from all around the world in one gallery!</p>
-  <br>
+<div style="text-align: center; font-size: 28px;">
+  <p>Beautiful and exotic animals from all around the world in one gallery!</p><br>
   <a href="/cpsc349-project1/about/index.html">About Us</a>
 </div>
 
-<div style="text-align:center;">
+<div style="text-align: center;">
 {% for collection in photos.h8stntd.media -%}
   <a href="/cpsc349-project1/animals/{{collection.id}}">
     <img src= "{{ collection.src.tiny }}" alt="{{collection.alt}}">
