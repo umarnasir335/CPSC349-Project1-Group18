@@ -15,11 +15,13 @@ title: Home
   <a href="/cpsc349-project1/about/index.html">About Us</a>
 </div>
 
+<div style="text-align:center;">
 {% for collection in photos.h8stntd.media -%}
   <a href="/cpsc349-project1/animals/{{collection.id}}">
     <img src= "{{ collection.src.tiny }}" alt="{{collection.alt}}">
   </a>
 {% endfor -%}
+</div>
 
 <footer>
     <hr>
