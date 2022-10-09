@@ -2,28 +2,24 @@
 layout: base
 title: Home
 ---
-<header style= "text-align: center; font-size: 32px; padding:0;">
-    <h1>{{ title }} </h1>
+
+<header style="text-align:center;font-size:32px;padding:0;">
+    <h1>{{ title }}</h1>
 </header>
+
 <br>
 
-<div style="text-align: center; font-size: 28px;">
-  <large>
-    <p>Beautiful and exotic animals from all around the world in one gallery!</p>
-    <br>
-    <a href="/cpsc349-project1/about/index.html">About Us</a>
-  </large>
-<div>
+<div style="text-align:center;font-size:28px;">
+  <p>Beautiful and exotic animals from all around the world in one gallery!</p>
+  <br>
+  <a href="/cpsc349-project1/about/index.html">About Us</a>
+</div>
 
-  <body>
-      {% for collection in photos.h8stntd.media -%}
-      <a href="/cpsc349-project1/animals/{{collection.id}}">
-        <img src= "{{ collection.src.tiny }}" alt="{{collection.alt}}">
-        {% endfor -%}
-      </a>
-
-</body>
-
+{% for collection in photos.h8stntd.media -%}
+  <a href="/cpsc349-project1/animals/{{collection.id}}">
+    <img src= "{{ collection.src.tiny }}" alt="{{collection.alt}}">
+  </a>
+{% endfor -%}
 
 <footer>
     <hr>
